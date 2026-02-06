@@ -15,7 +15,7 @@ fn monitoring() {
         clear_terminal();
         let urls = vec![
             "https://google.com",
-            "https://zoho.com",
+            "https://crm.zoho.com",
             "https://coda.io",
             "https://datawarehouse.dbd.go.th/",
         ];
