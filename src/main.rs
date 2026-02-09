@@ -49,21 +49,36 @@ fn monitoring() {
                         resp.status().to_string().red().bold()
                     };
 
-                    println!(
-                        "[{}] {} -> {:<10} | {:<10} | latency: {:.2?}",
-                        now, url, response, status, duration
+                    let message = format!(
+                        "Site: {} -> Status Code: {}, Result: {}, latency: {:.2?}",
+                        url, response.to_string(), status.to_string(), duration
                     );
+                    write_log(&message);
+                    println!("{}", message);
                 }
                 Err(err) => {
+                    write_log(&format!("{} -> ERROR: {}", url, err));
                     println!("[{}] {} -> {}", now, url, "ERROR".red().bold());
                     println!("      └─ {}", err.to_string().truecolor(169, 169, 169)); // Dark Gray for error details
                 }
             }
         }
         thread::sleep(Duration::from_secs(10));
+        write_log("\n");
     }
 }
 
+fn write_log(message: &str) {
+    let mut file = std::fs::OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open("network_monitor.log")
+        .unwrap();
+        
+    let timestamp = Local::now().format("%Y-%m-%d %H:%M:%S");
+    file.write_all(format!("[{}] {}\n", timestamp, message).as_bytes()).unwrap();
+    file.sync_all().unwrap();
+}
 fn main() {
     monitoring();
 }

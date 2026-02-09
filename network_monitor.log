@@ -1,0 +1,13 @@
+[2026-02-09 16:00:50] Site: https://google.com -> Status Code: [1;36m200 OK[0m, Result: [33mGood[0m, latency: 596.26ms
+[2026-02-09 16:00:59] Site: https://crm.zoho.com -> Status Code: [1;36m200 OK[0m, Result: [1;38;2;220;20;60mDown[0m, latency: 8.97s
+[2026-02-09 16:01:00] Site: https://coda.io -> Status Code: [1;31m403 Forbidden[0m, Result: [32mExcellent[0m, latency: 281.82ms
+[2026-02-09 16:01:00] Site: https://datawarehouse.dbd.go.th/ -> Status Code: [1;36m200 OK[0m, Result: [32mExcellent[0m, latency: 138.89ms
+[2026-02-09 16:01:10] 
+
+[2026-02-09 16:01:10] Site: https://google.com -> Status Code: [1;36m200 OK[0m, Result: [33mGood[0m, latency: 672.72ms
+[2026-02-09 16:01:14] Site: https://crm.zoho.com -> Status Code: [1;36m200 OK[0m, Result: [31mVery Slow[0m, latency: 3.79s
+[2026-02-09 16:01:14] Site: https://coda.io -> Status Code: [1;31m403 Forbidden[0m, Result: [32mExcellent[0m, latency: 58.03ms
+[2026-02-09 16:01:14] Site: https://datawarehouse.dbd.go.th/ -> Status Code: [1;36m200 OK[0m, Result: [32mExcellent[0m, latency: 120.31ms
+[2026-02-09 16:01:24] 
+
+[2026-02-09 16:01:25] Site: https://google.com -> Status Code: [1;36m200 OK[0m, Result: [33mGood[0m, latency: 633.26ms
